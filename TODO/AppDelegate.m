@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "ToDoListViewController.h"
+#import "ToDoDetailViewController.h"
+#import "TestViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,35 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    _operationDB = [[OperationDB alloc] init];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    ToDoListViewController *toDoListVC = [[ToDoListViewController alloc] init];
+//    TestViewController *test = [[TestViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:toDoListVC];
+    
+    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh"];
+    NSDateFormatter *secondDateFormatter = [[NSDateFormatter alloc] init];
+    [secondDateFormatter setDateFormat:@"cccc"];
+    secondDateFormatter.locale = locale;
+    NSDate *date = [NSDate date];
+    NSLog(@"++++%@", [secondDateFormatter stringFromDate:date]);
+    //++++星期五
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"'公元前/后:'G  '年份:'u'='yyyy'='yy '季度:'q'='qqq'='qqqq '月份:'M'='MMM'='MMMM '今天是今年第几周:'w '今天是本月第几周:'W  '今天是今天第几天:'D '今天是本月第几天:'d '星期:'c'='ccc'='cccc '上午/下午:'a '小时:'h'='H '分钟:'m '秒:'s '毫秒:'SSS  '这一天已过多少毫秒:'A  '时区名称:'zzzz'='vvvv '时区编号:'Z "];
+    NSLog(@"%@", [dateFormatter stringFromDate:[NSDate date]]);
+
+    /*
+      公元前/后:公元  年份:2016=2016=16 季度:3=3季度=第三季度 月份:7=7月=七月 今天是今年第几周:30 今天是本月第几周:4  今天是今天第几天:204 今天是本月第几天:22 星期:6=周五=星期五 上午/下午:09=9 分钟:34 秒:37 毫秒:034  这一天已过多少毫秒:34477034  时区名称:中国标准时间=中国标准时间 时区编号:+0800
+     */
+    
+    self.window.rootViewController = nav;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

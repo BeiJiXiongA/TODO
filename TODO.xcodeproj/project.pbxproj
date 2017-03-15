@@ -9,13 +9,47 @@
 /* Begin PBXBuildFile section */
 		E49CB3F91D2E5CF5005242D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB3F81D2E5CF5005242D1 /* main.m */; };
 		E49CB3FC1D2E5CF5005242D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB3FB1D2E5CF5005242D1 /* AppDelegate.m */; };
-		E49CB3FF1D2E5CF5005242D1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB3FE1D2E5CF5005242D1 /* ViewController.m */; };
-		E49CB4021D2E5CF5005242D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49CB4001D2E5CF5005242D1 /* Main.storyboard */; };
 		E49CB4051D2E5CF5005242D1 /* TODO.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4031D2E5CF5005242D1 /* TODO.xcdatamodeld */; };
 		E49CB4071D2E5CF5005242D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E49CB4061D2E5CF5005242D1 /* Assets.xcassets */; };
-		E49CB40A1D2E5CF5005242D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49CB4081D2E5CF5005242D1 /* LaunchScreen.storyboard */; };
 		E49CB4151D2E5CF5005242D1 /* TODOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4141D2E5CF5005242D1 /* TODOTests.m */; };
 		E49CB4201D2E5CF5005242D1 /* TODOUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB41F1D2E5CF5005242D1 /* TODOUITests.m */; };
+		E49CB4461D2F375B005242D1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E49CB4451D2F375B005242D1 /* libsqlite3.tbd */; };
+		E49CB4A21D34C171005242D1 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4821D34C171005242D1 /* FMDatabase.m */; };
+		E49CB4A31D34C171005242D1 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4841D34C171005242D1 /* FMDatabaseAdditions.m */; };
+		E49CB4A41D34C171005242D1 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4861D34C171005242D1 /* FMDatabasePool.m */; };
+		E49CB4A51D34C171005242D1 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4881D34C171005242D1 /* FMDatabaseQueue.m */; };
+		E49CB4A61D34C171005242D1 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB48B1D34C171005242D1 /* FMResultSet.m */; };
+		E49CB4A71D34C171005242D1 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB48F1D34C171005242D1 /* MJExtensionConst.m */; };
+		E49CB4A81D34C171005242D1 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4911D34C171005242D1 /* MJFoundation.m */; };
+		E49CB4A91D34C171005242D1 /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4931D34C171005242D1 /* MJProperty.m */; };
+		E49CB4AA1D34C171005242D1 /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4951D34C171005242D1 /* MJPropertyKey.m */; };
+		E49CB4AB1D34C171005242D1 /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4971D34C171005242D1 /* MJPropertyType.m */; };
+		E49CB4AC1D34C171005242D1 /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4991D34C171005242D1 /* NSObject+MJClass.m */; };
+		E49CB4AD1D34C171005242D1 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB49B1D34C171005242D1 /* NSObject+MJCoding.m */; };
+		E49CB4AE1D34C171005242D1 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB49D1D34C171005242D1 /* NSObject+MJKeyValue.m */; };
+		E49CB4AF1D34C171005242D1 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB49F1D34C171005242D1 /* NSObject+MJProperty.m */; };
+		E49CB4B01D34C171005242D1 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4A11D34C171005242D1 /* NSString+MJExtension.m */; };
+		E49CB4BB1D34C227005242D1 /* ToDoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4B41D34C227005242D1 /* ToDoListViewController.m */; };
+		E49CB4BC1D34C227005242D1 /* ToDoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4B71D34C227005242D1 /* ToDoModel.m */; };
+		E49CB4BD1D34C227005242D1 /* ToDoListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4B91D34C227005242D1 /* ToDoListTableViewCell.m */; };
+		E49CB4C21D34C27E005242D1 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4BF1D34C27E005242D1 /* UITableView+SDAutoTableViewCellHeight.m */; };
+		E49CB4C31D34C27E005242D1 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4C11D34C27E005242D1 /* UIView+SDAutoLayout.m */; };
+		E49CB4CF1D34C7B7005242D1 /* AttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4C81D34C7B7005242D1 /* AttributedLabel.m */; };
+		E49CB4D01D34C7B7005242D1 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4CA1D34C7B7005242D1 /* DBManager.m */; };
+		E49CB4D11D34C7B7005242D1 /* OperationDB.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4CC1D34C7B7005242D1 /* OperationDB.m */; };
+		E49CB4D21D34C7B7005242D1 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4CE1D34C7B7005242D1 /* Tools.m */; };
+		E49CB4D41D34C86A005242D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49CB4D31D34C86A005242D1 /* LaunchScreen.storyboard */; };
+		E49CB4D71D34CB1C005242D1 /* ToDoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4D61D34CB1C005242D1 /* ToDoDetailViewController.m */; };
+		E49CB4DA1D34D61C005242D1 /* DoneLogModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4D91D34D61C005242D1 /* DoneLogModel.m */; };
+		E49CB4DD1D34F8BB005242D1 /* LogCollectionContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4DC1D34F8BB005242D1 /* LogCollectionContainerView.m */; };
+		E49CB4E01D360BF0005242D1 /* CustomCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4DF1D360BEF005242D1 /* CustomCollectionReusableView.m */; };
+		E49CB4E31D3619E7005242D1 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4E21D3619E7005242D1 /* CustomCollectionViewCell.m */; };
+		E49CB4E91D3696D4005242D1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4E81D3696D4005242D1 /* TestViewController.m */; };
+		E49CB4EC1D379367005242D1 /* LogTableViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4EB1D379367005242D1 /* LogTableViewContainer.m */; };
+		E49CB4EF1D3798BE005242D1 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB4EE1D3798BE005242D1 /* CustomTableViewCell.m */; };
+		E4B2E15B1D38897D0021662E /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B2E15A1D38897D0021662E /* CustomView.m */; };
+		E4B2E15E1D388DAD0021662E /* BlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B2E15D1D388DAD0021662E /* BlockAlertView.m */; };
+		E4C89F5E1D406C45005D0DBE /* SHCustomDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C89F5D1D406C45005D0DBE /* SHCustomDatePickerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,12 +74,8 @@
 		E49CB3F81D2E5CF5005242D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E49CB3FA1D2E5CF5005242D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E49CB3FB1D2E5CF5005242D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E49CB3FD1D2E5CF5005242D1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E49CB3FE1D2E5CF5005242D1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E49CB4011D2E5CF5005242D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E49CB4041D2E5CF5005242D1 /* TODO.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TODO.xcdatamodel; sourceTree = "<group>"; };
 		E49CB4061D2E5CF5005242D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E49CB4091D2E5CF5005242D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E49CB40B1D2E5CF5005242D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E49CB4101D2E5CF5005242D1 /* TODOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TODOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49CB4141D2E5CF5005242D1 /* TODOTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TODOTests.m; sourceTree = "<group>"; };
@@ -53,6 +83,81 @@
 		E49CB41B1D2E5CF5005242D1 /* TODOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TODOUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49CB41F1D2E5CF5005242D1 /* TODOUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TODOUITests.m; sourceTree = "<group>"; };
 		E49CB4211D2E5CF5005242D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E49CB4301D2E6046005242D1 /* ToDoDefine.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoDefine.pch; sourceTree = "<group>"; };
+		E49CB4451D2F375B005242D1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		E49CB4811D34C171005242D1 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		E49CB4821D34C171005242D1 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		E49CB4831D34C171005242D1 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		E49CB4841D34C171005242D1 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		E49CB4851D34C171005242D1 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		E49CB4861D34C171005242D1 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		E49CB4871D34C171005242D1 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		E49CB4881D34C171005242D1 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		E49CB4891D34C171005242D1 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		E49CB48A1D34C171005242D1 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		E49CB48B1D34C171005242D1 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		E49CB48D1D34C171005242D1 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		E49CB48E1D34C171005242D1 /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
+		E49CB48F1D34C171005242D1 /* MJExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConst.m; sourceTree = "<group>"; };
+		E49CB4901D34C171005242D1 /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
+		E49CB4911D34C171005242D1 /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		E49CB4921D34C171005242D1 /* MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJProperty.h; sourceTree = "<group>"; };
+		E49CB4931D34C171005242D1 /* MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJProperty.m; sourceTree = "<group>"; };
+		E49CB4941D34C171005242D1 /* MJPropertyKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyKey.h; sourceTree = "<group>"; };
+		E49CB4951D34C171005242D1 /* MJPropertyKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyKey.m; sourceTree = "<group>"; };
+		E49CB4961D34C171005242D1 /* MJPropertyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyType.h; sourceTree = "<group>"; };
+		E49CB4971D34C171005242D1 /* MJPropertyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyType.m; sourceTree = "<group>"; };
+		E49CB4981D34C171005242D1 /* NSObject+MJClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJClass.h"; sourceTree = "<group>"; };
+		E49CB4991D34C171005242D1 /* NSObject+MJClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJClass.m"; sourceTree = "<group>"; };
+		E49CB49A1D34C171005242D1 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		E49CB49B1D34C171005242D1 /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		E49CB49C1D34C171005242D1 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		E49CB49D1D34C171005242D1 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		E49CB49E1D34C171005242D1 /* NSObject+MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		E49CB49F1D34C171005242D1 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		E49CB4A01D34C171005242D1 /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
+		E49CB4A11D34C171005242D1 /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+		E49CB4B41D34C227005242D1 /* ToDoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoListViewController.m; sourceTree = "<group>"; };
+		E49CB4B61D34C227005242D1 /* ToDoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoModel.h; sourceTree = "<group>"; };
+		E49CB4B71D34C227005242D1 /* ToDoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoModel.m; sourceTree = "<group>"; };
+		E49CB4B91D34C227005242D1 /* ToDoListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoListTableViewCell.m; sourceTree = "<group>"; };
+		E49CB4BE1D34C27E005242D1 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
+		E49CB4BF1D34C27E005242D1 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
+		E49CB4C01D34C27E005242D1 /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
+		E49CB4C11D34C27E005242D1 /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
+		E49CB4C41D34C5BD005242D1 /* ToDoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoListViewController.h; sourceTree = "<group>"; };
+		E49CB4C51D34C5C4005242D1 /* ToDoListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoListTableViewCell.h; sourceTree = "<group>"; };
+		E49CB4C71D34C7B7005242D1 /* AttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributedLabel.h; sourceTree = "<group>"; };
+		E49CB4C81D34C7B7005242D1 /* AttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributedLabel.m; sourceTree = "<group>"; };
+		E49CB4C91D34C7B7005242D1 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		E49CB4CA1D34C7B7005242D1 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		E49CB4CB1D34C7B7005242D1 /* OperationDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationDB.h; sourceTree = "<group>"; };
+		E49CB4CC1D34C7B7005242D1 /* OperationDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationDB.m; sourceTree = "<group>"; };
+		E49CB4CD1D34C7B7005242D1 /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		E49CB4CE1D34C7B7005242D1 /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
+		E49CB4D31D34C86A005242D1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E49CB4D51D34CB1C005242D1 /* ToDoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoDetailViewController.h; sourceTree = "<group>"; };
+		E49CB4D61D34CB1C005242D1 /* ToDoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoDetailViewController.m; sourceTree = "<group>"; };
+		E49CB4D81D34D61C005242D1 /* DoneLogModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoneLogModel.h; sourceTree = "<group>"; };
+		E49CB4D91D34D61C005242D1 /* DoneLogModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoneLogModel.m; sourceTree = "<group>"; };
+		E49CB4DB1D34F8BB005242D1 /* LogCollectionContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCollectionContainerView.h; sourceTree = "<group>"; };
+		E49CB4DC1D34F8BB005242D1 /* LogCollectionContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogCollectionContainerView.m; sourceTree = "<group>"; };
+		E49CB4DE1D360BEF005242D1 /* CustomCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionReusableView.h; sourceTree = "<group>"; };
+		E49CB4DF1D360BEF005242D1 /* CustomCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionReusableView.m; sourceTree = "<group>"; };
+		E49CB4E11D3619E7005242D1 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
+		E49CB4E21D3619E7005242D1 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
+		E49CB4E71D3696D4005242D1 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		E49CB4E81D3696D4005242D1 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		E49CB4EA1D379367005242D1 /* LogTableViewContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogTableViewContainer.h; sourceTree = "<group>"; };
+		E49CB4EB1D379367005242D1 /* LogTableViewContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogTableViewContainer.m; sourceTree = "<group>"; };
+		E49CB4ED1D3798BE005242D1 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		E49CB4EE1D3798BE005242D1 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		E4B2E1591D38897D0021662E /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		E4B2E15A1D38897D0021662E /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+		E4B2E15C1D388DAD0021662E /* BlockAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockAlertView.h; sourceTree = "<group>"; };
+		E4B2E15D1D388DAD0021662E /* BlockAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockAlertView.m; sourceTree = "<group>"; };
+		E4C89F5C1D406C45005D0DBE /* SHCustomDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCustomDatePickerView.h; sourceTree = "<group>"; };
+		E4C89F5D1D406C45005D0DBE /* SHCustomDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCustomDatePickerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E49CB4461D2F375B005242D1 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +189,7 @@
 		E49CB3EB1D2E5CF5005242D1 = {
 			isa = PBXGroup;
 			children = (
+				E49CB4451D2F375B005242D1 /* libsqlite3.tbd */,
 				E49CB3F61D2E5CF5005242D1 /* TODO */,
 				E49CB4131D2E5CF5005242D1 /* TODOTests */,
 				E49CB41E1D2E5CF5005242D1 /* TODOUITests */,
@@ -103,15 +210,17 @@
 		E49CB3F61D2E5CF5005242D1 /* TODO */ = {
 			isa = PBXGroup;
 			children = (
+				E49CB4E41D369492005242D1 /* Test */,
+				E49CB4C61D34C7B7005242D1 /* CustomClass */,
+				E49CB4B11D34C1BB005242D1 /* TaskList */,
+				E49CB47F1D34C0F6005242D1 /* Third */,
 				E49CB3FA1D2E5CF5005242D1 /* AppDelegate.h */,
 				E49CB3FB1D2E5CF5005242D1 /* AppDelegate.m */,
-				E49CB3FD1D2E5CF5005242D1 /* ViewController.h */,
-				E49CB3FE1D2E5CF5005242D1 /* ViewController.m */,
-				E49CB4001D2E5CF5005242D1 /* Main.storyboard */,
 				E49CB4061D2E5CF5005242D1 /* Assets.xcassets */,
-				E49CB4081D2E5CF5005242D1 /* LaunchScreen.storyboard */,
+				E49CB4D31D34C86A005242D1 /* LaunchScreen.storyboard */,
 				E49CB40B1D2E5CF5005242D1 /* Info.plist */,
 				E49CB4031D2E5CF5005242D1 /* TODO.xcdatamodeld */,
+				E49CB4301D2E6046005242D1 /* ToDoDefine.pch */,
 				E49CB3F71D2E5CF5005242D1 /* Supporting Files */,
 			);
 			path = TODO;
@@ -141,6 +250,162 @@
 				E49CB4211D2E5CF5005242D1 /* Info.plist */,
 			);
 			path = TODOUITests;
+			sourceTree = "<group>";
+		};
+		E49CB47F1D34C0F6005242D1 /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				E49CB4BE1D34C27E005242D1 /* UITableView+SDAutoTableViewCellHeight.h */,
+				E49CB4BF1D34C27E005242D1 /* UITableView+SDAutoTableViewCellHeight.m */,
+				E49CB4C01D34C27E005242D1 /* UIView+SDAutoLayout.h */,
+				E49CB4C11D34C27E005242D1 /* UIView+SDAutoLayout.m */,
+				E49CB4801D34C171005242D1 /* FMDB */,
+				E49CB48C1D34C171005242D1 /* MJExtension */,
+			);
+			path = Third;
+			sourceTree = "<group>";
+		};
+		E49CB4801D34C171005242D1 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				E49CB4811D34C171005242D1 /* FMDatabase.h */,
+				E49CB4821D34C171005242D1 /* FMDatabase.m */,
+				E49CB4831D34C171005242D1 /* FMDatabaseAdditions.h */,
+				E49CB4841D34C171005242D1 /* FMDatabaseAdditions.m */,
+				E49CB4851D34C171005242D1 /* FMDatabasePool.h */,
+				E49CB4861D34C171005242D1 /* FMDatabasePool.m */,
+				E49CB4871D34C171005242D1 /* FMDatabaseQueue.h */,
+				E49CB4881D34C171005242D1 /* FMDatabaseQueue.m */,
+				E49CB4891D34C171005242D1 /* FMDB.h */,
+				E49CB48A1D34C171005242D1 /* FMResultSet.h */,
+				E49CB48B1D34C171005242D1 /* FMResultSet.m */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		E49CB48C1D34C171005242D1 /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				E49CB48D1D34C171005242D1 /* MJExtension.h */,
+				E49CB48E1D34C171005242D1 /* MJExtensionConst.h */,
+				E49CB48F1D34C171005242D1 /* MJExtensionConst.m */,
+				E49CB4901D34C171005242D1 /* MJFoundation.h */,
+				E49CB4911D34C171005242D1 /* MJFoundation.m */,
+				E49CB4921D34C171005242D1 /* MJProperty.h */,
+				E49CB4931D34C171005242D1 /* MJProperty.m */,
+				E49CB4941D34C171005242D1 /* MJPropertyKey.h */,
+				E49CB4951D34C171005242D1 /* MJPropertyKey.m */,
+				E49CB4961D34C171005242D1 /* MJPropertyType.h */,
+				E49CB4971D34C171005242D1 /* MJPropertyType.m */,
+				E49CB4981D34C171005242D1 /* NSObject+MJClass.h */,
+				E49CB4991D34C171005242D1 /* NSObject+MJClass.m */,
+				E49CB49A1D34C171005242D1 /* NSObject+MJCoding.h */,
+				E49CB49B1D34C171005242D1 /* NSObject+MJCoding.m */,
+				E49CB49C1D34C171005242D1 /* NSObject+MJKeyValue.h */,
+				E49CB49D1D34C171005242D1 /* NSObject+MJKeyValue.m */,
+				E49CB49E1D34C171005242D1 /* NSObject+MJProperty.h */,
+				E49CB49F1D34C171005242D1 /* NSObject+MJProperty.m */,
+				E49CB4A01D34C171005242D1 /* NSString+MJExtension.h */,
+				E49CB4A11D34C171005242D1 /* NSString+MJExtension.m */,
+			);
+			path = MJExtension;
+			sourceTree = "<group>";
+		};
+		E49CB4B11D34C1BB005242D1 /* TaskList */ = {
+			isa = PBXGroup;
+			children = (
+				E49CB4B21D34C227005242D1 /* Controller */,
+				E49CB4B51D34C227005242D1 /* Model */,
+				E49CB4B81D34C227005242D1 /* View */,
+			);
+			path = TaskList;
+			sourceTree = "<group>";
+		};
+		E49CB4B21D34C227005242D1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E49CB4C41D34C5BD005242D1 /* ToDoListViewController.h */,
+				E49CB4B41D34C227005242D1 /* ToDoListViewController.m */,
+				E49CB4D51D34CB1C005242D1 /* ToDoDetailViewController.h */,
+				E49CB4D61D34CB1C005242D1 /* ToDoDetailViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E49CB4B51D34C227005242D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E49CB4B61D34C227005242D1 /* ToDoModel.h */,
+				E49CB4B71D34C227005242D1 /* ToDoModel.m */,
+				E49CB4D81D34D61C005242D1 /* DoneLogModel.h */,
+				E49CB4D91D34D61C005242D1 /* DoneLogModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E49CB4B81D34C227005242D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E49CB4C51D34C5C4005242D1 /* ToDoListTableViewCell.h */,
+				E49CB4B91D34C227005242D1 /* ToDoListTableViewCell.m */,
+				E49CB4DB1D34F8BB005242D1 /* LogCollectionContainerView.h */,
+				E49CB4DC1D34F8BB005242D1 /* LogCollectionContainerView.m */,
+				E49CB4DE1D360BEF005242D1 /* CustomCollectionReusableView.h */,
+				E49CB4DF1D360BEF005242D1 /* CustomCollectionReusableView.m */,
+				E49CB4E11D3619E7005242D1 /* CustomCollectionViewCell.h */,
+				E49CB4E21D3619E7005242D1 /* CustomCollectionViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E49CB4C61D34C7B7005242D1 /* CustomClass */ = {
+			isa = PBXGroup;
+			children = (
+				E4C89F5C1D406C45005D0DBE /* SHCustomDatePickerView.h */,
+				E4C89F5D1D406C45005D0DBE /* SHCustomDatePickerView.m */,
+				E49CB4C71D34C7B7005242D1 /* AttributedLabel.h */,
+				E49CB4C81D34C7B7005242D1 /* AttributedLabel.m */,
+				E49CB4C91D34C7B7005242D1 /* DBManager.h */,
+				E49CB4CA1D34C7B7005242D1 /* DBManager.m */,
+				E49CB4CB1D34C7B7005242D1 /* OperationDB.h */,
+				E49CB4CC1D34C7B7005242D1 /* OperationDB.m */,
+				E49CB4CD1D34C7B7005242D1 /* Tools.h */,
+				E49CB4CE1D34C7B7005242D1 /* Tools.m */,
+			);
+			path = CustomClass;
+			sourceTree = "<group>";
+		};
+		E49CB4E41D369492005242D1 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				E49CB4E51D369492005242D1 /* Controller */,
+				E49CB4E61D369492005242D1 /* View */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		E49CB4E51D369492005242D1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E49CB4E71D3696D4005242D1 /* TestViewController.h */,
+				E49CB4E81D3696D4005242D1 /* TestViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E49CB4E61D369492005242D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E49CB4EA1D379367005242D1 /* LogTableViewContainer.h */,
+				E49CB4EB1D379367005242D1 /* LogTableViewContainer.m */,
+				E49CB4ED1D3798BE005242D1 /* CustomTableViewCell.h */,
+				E49CB4EE1D3798BE005242D1 /* CustomTableViewCell.m */,
+				E4B2E1591D38897D0021662E /* CustomView.h */,
+				E4B2E15A1D38897D0021662E /* CustomView.m */,
+				E4B2E15C1D388DAD0021662E /* BlockAlertView.h */,
+				E4B2E15D1D388DAD0021662E /* BlockAlertView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +475,7 @@
 				TargetAttributes = {
 					E49CB3F31D2E5CF5005242D1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = X2AB8TRR33;
 					};
 					E49CB40F1D2E5CF5005242D1 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -246,9 +512,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E49CB40A1D2E5CF5005242D1 /* LaunchScreen.storyboard in Resources */,
 				E49CB4071D2E5CF5005242D1 /* Assets.xcassets in Resources */,
-				E49CB4021D2E5CF5005242D1 /* Main.storyboard in Resources */,
+				E49CB4D41D34C86A005242D1 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,10 +538,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E49CB3FF1D2E5CF5005242D1 /* ViewController.m in Sources */,
+				E49CB4A91D34C171005242D1 /* MJProperty.m in Sources */,
+				E49CB4A71D34C171005242D1 /* MJExtensionConst.m in Sources */,
+				E49CB4A81D34C171005242D1 /* MJFoundation.m in Sources */,
+				E49CB4D21D34C7B7005242D1 /* Tools.m in Sources */,
+				E49CB4B01D34C171005242D1 /* NSString+MJExtension.m in Sources */,
+				E4B2E15B1D38897D0021662E /* CustomView.m in Sources */,
+				E49CB4CF1D34C7B7005242D1 /* AttributedLabel.m in Sources */,
+				E49CB4A21D34C171005242D1 /* FMDatabase.m in Sources */,
+				E49CB4BD1D34C227005242D1 /* ToDoListTableViewCell.m in Sources */,
+				E49CB4EF1D3798BE005242D1 /* CustomTableViewCell.m in Sources */,
+				E49CB4D11D34C7B7005242D1 /* OperationDB.m in Sources */,
+				E49CB4AA1D34C171005242D1 /* MJPropertyKey.m in Sources */,
+				E49CB4EC1D379367005242D1 /* LogTableViewContainer.m in Sources */,
+				E49CB4DA1D34D61C005242D1 /* DoneLogModel.m in Sources */,
 				E49CB3FC1D2E5CF5005242D1 /* AppDelegate.m in Sources */,
+				E49CB4A51D34C171005242D1 /* FMDatabaseQueue.m in Sources */,
+				E49CB4DD1D34F8BB005242D1 /* LogCollectionContainerView.m in Sources */,
+				E49CB4C31D34C27E005242D1 /* UIView+SDAutoLayout.m in Sources */,
+				E4C89F5E1D406C45005D0DBE /* SHCustomDatePickerView.m in Sources */,
+				E49CB4D71D34CB1C005242D1 /* ToDoDetailViewController.m in Sources */,
+				E49CB4A61D34C171005242D1 /* FMResultSet.m in Sources */,
+				E49CB4AF1D34C171005242D1 /* NSObject+MJProperty.m in Sources */,
+				E49CB4E91D3696D4005242D1 /* TestViewController.m in Sources */,
+				E49CB4BB1D34C227005242D1 /* ToDoListViewController.m in Sources */,
+				E49CB4AB1D34C171005242D1 /* MJPropertyType.m in Sources */,
+				E49CB4C21D34C27E005242D1 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				E49CB3F91D2E5CF5005242D1 /* main.m in Sources */,
+				E49CB4A31D34C171005242D1 /* FMDatabaseAdditions.m in Sources */,
+				E49CB4E31D3619E7005242D1 /* CustomCollectionViewCell.m in Sources */,
+				E49CB4AE1D34C171005242D1 /* NSObject+MJKeyValue.m in Sources */,
+				E49CB4E01D360BF0005242D1 /* CustomCollectionReusableView.m in Sources */,
+				E49CB4D01D34C7B7005242D1 /* DBManager.m in Sources */,
+				E49CB4AC1D34C171005242D1 /* NSObject+MJClass.m in Sources */,
+				E49CB4AD1D34C171005242D1 /* NSObject+MJCoding.m in Sources */,
+				E49CB4A41D34C171005242D1 /* FMDatabasePool.m in Sources */,
+				E4B2E15E1D388DAD0021662E /* BlockAlertView.m in Sources */,
 				E49CB4051D2E5CF5005242D1 /* TODO.xcdatamodeld in Sources */,
+				E49CB4BC1D34C227005242D1 /* ToDoModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,25 +609,6 @@
 			targetProxy = E49CB41C1D2E5CF5005242D1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		E49CB4001D2E5CF5005242D1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E49CB4011D2E5CF5005242D1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E49CB4081D2E5CF5005242D1 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E49CB4091D2E5CF5005242D1 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E49CB4221D2E5CF5005242D1 /* Debug */ = {
@@ -419,10 +699,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TODO/ToDoDefine.pch";
 				INFOPLIST_FILE = TODO/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangwei.TODO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -430,10 +715,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TODO/ToDoDefine.pch";
 				INFOPLIST_FILE = TODO/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangwei.TODO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -502,6 +792,7 @@
 				E49CB4261D2E5CF5005242D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E49CB4271D2E5CF5005242D1 /* Build configuration list for PBXNativeTarget "TODOTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +801,7 @@
 				E49CB4291D2E5CF5005242D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E49CB42A1D2E5CF5005242D1 /* Build configuration list for PBXNativeTarget "TODOUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +810,7 @@
 				E49CB42C1D2E5CF5005242D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -1,0 +1,53 @@
+//
+//  ToDoDefine.pch
+//  TODO
+//
+//  Created by ZhangWei-SpaceHome on 16/7/7.
+//  Copyright © 2016年 zhangwei. All rights reserved.
+//
+
+#ifndef ToDoDefine_pch
+#define ToDoDefine_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "OperationDB.h"
+#import "MJExtension.h"
+#import "UIView+SDAutoLayout.h"
+#import "Tools.h"
+
+#define ROOT_VIEW_BGCOLOR RGB(243, 246, 248)
+#define DarkTextColor RGB(51, 51, 51)
+#define Line_Color  RGB(241, 242, 245)
+
+#define WIDTH  ([[UIScreen mainScreen]bounds].size.width)
+#define HEIGHT ([[UIScreen mainScreen]bounds].size.height)
+
+#define SYSTEM_VERSION ([[UIDevice currentDevice].systemVersion floatValue])
+
+#define UI_NAV_BAR_HEIGHT  (SYSTEM_VERSION < 7 ? 44:64)
+#define UI_TAB_BAR_HEIGHT  49
+#define UI_STATUS_BAR_HEIGHT (SYSTEM_VERSION < 7 ? 0:20)
+
+#define A_DAY_SECS  (24*60*60)
+
+#ifdef DEBUG
+
+#define DDLOG(...) NSLog(__VA_ARGS__)
+#define DDLOG_CURRENT_METHOD NSLog(@"%@-%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd))
+
+#else
+
+#define DDLOG(...) ;
+#define DDLOG_CURRENT_METHOD ;
+
+#endif
+
+
+#define RGB(__r,__g,__b) [UIColor colorWithRed:(1.0*(__r)/255 )\
+green:(1.0*(__g)/255) \
+blue:(1.0*(__b)/255)\
+alpha:1]
+
+#endif /* ToDoDefine_pch */
