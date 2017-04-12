@@ -25,9 +25,10 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    ToDoListViewController *toDoListVC = [[ToDoListViewController alloc] init];
+//    ToDoListViewController *toDoListVC = [[ToDoListViewController alloc] init];
 //    TestViewController *test = [[TestViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:toDoListVC];
+    ToDoDetailViewController *detailVC = [[ToDoDetailViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:detailVC];
     
     NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh"];
     NSDateFormatter *secondDateFormatter = [[NSDateFormatter alloc] init];

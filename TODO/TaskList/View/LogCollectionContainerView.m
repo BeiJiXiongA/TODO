@@ -18,6 +18,8 @@ NSString * const KReusableFooterView = @"reuseFooter";
 @interface LogCollectionContainerView ()<UICollectionViewDelegate,UICollectionViewDataSource>
 {
     UICollectionView *logCollectionView;
+    NSMutableArray *indexArray;
+    NSInteger currentIndex;
     NSInteger currentYear;
 }
 @end
@@ -48,6 +50,12 @@ NSString * const KReusableFooterView = @"reuseFooter";
             [weekView addSubview:label];
         }
 
+        indexArray = [[NSMutableArray alloc] init];
+        for (int i = -2; i < 5; i ++) {
+            [indexArray addObject:@(i)];
+        }
+        currentIndex = 0;
+        
         
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
@@ -65,8 +73,8 @@ NSString * const KReusableFooterView = @"reuseFooter";
         //注册重复使用的headerView和footerView
         [logCollectionView registerClass:[CustomCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:KReusableHeaderView];
         
-        NSInteger monthCount = [Tools calculateMonthsWithDate:[NSDate date]];
-        [logCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:monthCount] atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
+//        NSInteger monthCount = [Tools calculateMonthsWithDate:[NSDate date]];
+//        [logCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:monthCount] atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
         
     }
     return self;
@@ -81,8 +89,9 @@ NSString * const KReusableFooterView = @"reuseFooter";
 #pragma mark- UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     NSDateComponents *comp = [Tools getComponents];
-    NSInteger year = [Tools getYearWithSection:section];
-    NSInteger month = [Tools getMonthWithSection:section];
+    NSInteger index = ((NSNumber *)indexArray[section]).integerValue;
+    NSInteger year = [Tools getYearWithSection:index];
+    NSInteger month = [Tools getMonthWithSection:index];
     [comp setMonth:month];
     [comp setYear:year];
     NSInteger week = [Tools getWeekDayWithYear:year month:month day:1];
@@ -92,8 +101,9 @@ NSString * const KReusableFooterView = @"reuseFooter";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:KcollectionViewCellID forIndexPath:indexPath];
-    NSInteger year = [Tools getYearWithSection:indexPath.section];
-    NSInteger month = [Tools getMonthWithSection:indexPath.section];
+    NSInteger index = ((NSNumber *)indexArray[indexPath.section]).integerValue;
+    NSInteger year = [Tools getYearWithSection:index];
+    NSInteger month = [Tools getMonthWithSection:index];
     
     NSDateComponents *comp = [Tools getComponents];
     [comp setYear:year];
@@ -122,8 +132,52 @@ NSString * const KReusableFooterView = @"reuseFooter";
     return cell;
 }
 
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    [self scrollViewDidStop:scrollView];
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    [self scrollViewDidStop:scrollView];
+}
+
+- (void)scrollViewDidStop:(UIScrollView *)scrollView {
+    NSLog(@"\nsize== %f offset==%f",scrollView.contentSize.height,scrollView.contentOffset.y+HEIGHT);
+    if (scrollView.contentOffset.y == 0) {
+        NSLog(@"滑到顶部");
+        NSInteger index = ((NSNumber *)indexArray[2]).integerValue;
+        [indexArray replaceObjectAtIndex:2 withObject:@(index-1)];
+        [logCollectionView reloadData];
+//        [logCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:2] atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
+        
+        for (int i = 0; i < indexArray.count; i++) {
+            if(i == 2){
+                continue;
+            }
+            NSInteger index = ((NSNumber *)indexArray[i]).integerValue;
+            [indexArray replaceObjectAtIndex:i withObject:@(index-1)];
+        }
+        [logCollectionView reloadData];
+    }else if(scrollView.contentOffset.y + HEIGHT > scrollView.contentSize.height){
+        NSLog(@"滑到底部");
+        NSInteger index = ((NSNumber *)indexArray[2]).integerValue;
+        [indexArray replaceObjectAtIndex:2 withObject:@(index+1)];
+        [logCollectionView reloadData];
+        //        [logCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:2] atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
+        
+        for (int i = 0; i < indexArray.count; i++) {
+            if(i == 2){
+                continue;
+            }
+            NSInteger index = ((NSNumber *)indexArray[i]).integerValue;
+            [indexArray replaceObjectAtIndex:i withObject:@(index+1)];
+        }
+        [logCollectionView reloadData];
+    }
+}
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 20;
+    return 5;
 }
 
 - (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -135,7 +189,8 @@ NSString * const KReusableFooterView = @"reuseFooter";
     CustomCollectionReusableView *reusableView;
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:KReusableHeaderView forIndexPath:indexPath];
-        reusableView.titleLabel.text = [NSString stringWithFormat:@"%ld年%ld月",[Tools getYearWithSection:indexPath.section],[Tools getMonthWithSection:indexPath.section]];
+        NSInteger index = ((NSNumber *)indexArray[indexPath.section]).integerValue;
+        reusableView.titleLabel.text = [NSString stringWithFormat:@"%ld年%ld月",[Tools getYearWithSection:index],[Tools getMonthWithSection:index]];
     }
     return reusableView;
 }
@@ -183,8 +238,9 @@ NSString * const KReusableFooterView = @"reuseFooter";
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"点击section%ld的第%ld个cell",indexPath.section,indexPath.row);
-    NSInteger year = [Tools getYearWithSection:indexPath.section];
-    NSInteger month = [Tools getMonthWithSection:indexPath.section];
+    NSInteger index = ((NSNumber *)indexArray[indexPath.section]).integerValue;
+    NSInteger year = [Tools getYearWithSection:index];
+    NSInteger month = [Tools getMonthWithSection:index];
     
     NSDateComponents *comp = [Tools getComponents];
     NSInteger week = [Tools getWeekDayWithYear:year month:month day:1];

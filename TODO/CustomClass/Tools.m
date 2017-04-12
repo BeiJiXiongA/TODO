@@ -143,13 +143,21 @@
     if (([self getMonth] + section)%12 == 0) {
         return 12;
     }
-    return ([self getMonth] + section)%12;
+    NSInteger currentMonth = [self getMonth];
+    if (currentMonth+section > 0) {
+        return (currentMonth + section)%12;
+    }
+    return 12+(currentMonth + section)%12;
 }
 
 +(NSInteger)getYearWithSection:(NSInteger)section
 {
     NSInteger currentYear = [self getYear];
-    return currentYear + ([self getMonth] + section - 1)/12;
+    NSInteger currentMonth = [self getMonth];
+    if (currentMonth+section > 0) {
+        return currentYear + (currentMonth + section)/12;
+    }
+    return currentYear + ([self getMonth] + section)/12-1;
 }
 
 +(NSDate *)getDateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day
@@ -166,8 +174,8 @@
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy-MM-dd"];
-    NSDate *originDate = [formatter dateFromString:@"2016-03-01"];
-//    NSDate *originDate = [NSDate date];
+//    NSDate *originDate = [formatter dateFromString:@"2016-03-01"];
+    NSDate *originDate = [NSDate date];
     return originDate;
 }
 

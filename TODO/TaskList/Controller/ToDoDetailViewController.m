@@ -45,38 +45,39 @@
         self.title = _tname;
     }
     
-    logArray = [[NSMutableArray alloc] init];
+//    logArray = [[NSMutableArray alloc] init];
     
-    logTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, UI_NAV_BAR_HEIGHT, WIDTH, HEIGHT-UI_NAV_BAR_HEIGHT) style:UITableViewStylePlain];
-    logTableView.delegate = self;
-    logTableView.dataSource = self;
-    [self.view addSubview:logTableView];
-    logTableView.tableFooterView = [[UIView alloc] init];
+//    logTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, UI_NAV_BAR_HEIGHT, WIDTH, HEIGHT-UI_NAV_BAR_HEIGHT) style:UITableViewStylePlain];
+//    logTableView.delegate = self;
+//    logTableView.dataSource = self;
+//    [self.view addSubview:logTableView];
+//    logTableView.tableFooterView = [[UIView alloc] init];
+//    
+//    datePicker = [[SHCustomDatePickerView alloc] init];
+//    datePicker.delegate = self;
+//    datePicker.currentDate = [NSDate date];
+//    datePicker.withOutLimit = YES;
     
-    datePicker = [[SHCustomDatePickerView alloc] init];
-    datePicker.delegate = self;
-    datePicker.currentDate = [NSDate date];
-    datePicker.withOutLimit = YES;
+//    if ([self.tname rangeOfString:@"次数"].length == 0) {
+//        datesArray = [[NSMutableArray alloc] init];
+//        UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"日历" style:UIBarButtonItemStylePlain target:self action:@selector(rightClick:)];
+//        self.navigationItem.rightBarButtonItem = rightItem;
     
-    if ([self.tname rangeOfString:@"次数"].length == 0) {
-        datesArray = [[NSMutableArray alloc] init];
-        UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"日历" style:UIBarButtonItemStylePlain target:self action:@selector(rightClick:)];
-        self.navigationItem.rightBarButtonItem = rightItem;
-        
-        logCollectView = [[LogCollectionContainerView alloc] initWithFrame:CGRectMake(0, UI_NAV_BAR_HEIGHT, WIDTH,HEIGHT-UI_NAV_BAR_HEIGHT)];
-        logCollectView.logCollectionViewDelegate = self;
-        [self.view insertSubview:logCollectView belowSubview:logTableView];
-        [logCollectView addSubview:datePicker];
-    }else{
-        logTableView.top = 0;
-        logTableView.height = HEIGHT;
-        UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"记录" style:UIBarButtonItemStylePlain target:self action:@selector(rightClick:)];
-        self.navigationItem.rightBarButtonItem = rightItem;
-        [self.view addSubview:datePicker];
-    }
+    logCollectView = [[LogCollectionContainerView alloc] initWithFrame:CGRectMake(0, UI_NAV_BAR_HEIGHT, WIDTH,HEIGHT-UI_NAV_BAR_HEIGHT)];
+    logCollectView.logCollectionViewDelegate = self;
+    [self.view addSubview:logCollectView];
+//        [self.view insertSubview:logCollectView belowSubview:logTableView];
+//        [logCollectView addSubview:datePicker];
+//    }else{
+//        logTableView.top = 0;
+//        logTableView.height = HEIGHT;
+//        UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"记录" style:UIBarButtonItemStylePlain target:self action:@selector(rightClick:)];
+//        self.navigationItem.rightBarButtonItem = rightItem;
+//        [self.view addSubview:datePicker];
+//    }
     
-    [self reloadTableView];
-    [self reloadCollectionView];
+//    [self reloadTableView];
+//    [self reloadCollectionView];
 }
 
 -(void)rightClick:(UIBarButtonItem *)item
