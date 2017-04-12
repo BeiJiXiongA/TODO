@@ -19,6 +19,7 @@ NSString * const KReusableFooterView = @"reuseFooter";
 {
     UICollectionView *logCollectionView;
     NSMutableArray *indexArray;
+    NSMutableArray *itemCountArray;
     NSInteger currentIndex;
     NSInteger currentYear;
 }
@@ -51,8 +52,10 @@ NSString * const KReusableFooterView = @"reuseFooter";
         }
 
         indexArray = [[NSMutableArray alloc] init];
+        itemCountArray = [[NSMutableArray alloc] init];
         for (int i = -2; i < 5; i ++) {
             [indexArray addObject:@(i)];
+            [itemCountArray addObject:@([self itemCountWithIndex:i])];
         }
         currentIndex = 0;
         
@@ -88,8 +91,12 @@ NSString * const KReusableFooterView = @"reuseFooter";
 
 #pragma mark- UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return [[itemCountArray objectAtIndex:section] integerValue];
+}
+
+-(NSInteger)itemCountWithIndex:(NSInteger)index
+{
     NSDateComponents *comp = [Tools getComponents];
-    NSInteger index = ((NSNumber *)indexArray[section]).integerValue;
     NSInteger year = [Tools getYearWithSection:index];
     NSInteger month = [Tools getMonthWithSection:index];
     [comp setMonth:month];
@@ -142,12 +149,60 @@ NSString * const KReusableFooterView = @"reuseFooter";
 }
 
 - (void)scrollViewDidStop:(UIScrollView *)scrollView {
+    
+    
+    NSInteger offset = 0;
+    CGFloat temH = 0;
+    for (int i = 0; i < indexArray.count; i++) {
+        if (temH < fabs(scrollView.contentOffset.y)) {
+            offset ++;
+            NSInteger index = ((NSNumber *)indexArray[i]).integerValue;
+            temH = temH + ([self itemCountWithIndex:index]/7+ ([self itemCountWithIndex:index]%7==0?0:1));
+        }else{
+            break;
+        }
+    }
+    NSLog(@"offset====%zi",offset);
+    
+    
+    NSInteger index = ((NSNumber *)indexArray[2]).integerValue;
+    [indexArray replaceObjectAtIndex:2 withObject:@(index+1)];
+    [itemCountArray replaceObjectAtIndex:2 withObject:@([self itemCountWithIndex:index]-1)];
+    //        [logCollectionView reloadData];
+//    NSIndexPath *idxPath = [NSIndexPath indexPathForItem:1 inSection:0];
+//    [logCollectionView scrollToItemAtIndexPath:idxPath atScrollPosition:0 animated:NO];
+    //        [logCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:2] atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
+    
+    for (int i = 0; i < indexArray.count; i++) {
+        if(i == 2){
+            continue;
+        }
+        NSInteger index = ((NSNumber *)indexArray[i]).integerValue;
+        [indexArray replaceObjectAtIndex:i withObject:@(index+1)];
+        [itemCountArray replaceObjectAtIndex:i withObject:@([self itemCountWithIndex:index])];
+    }
+//    scrollView.contentOffset.x/ scrollView.bounds.size.width - 1;
+    //当前(上一个当前)图片的索引加上滚动的大小就是滚动后图片的索引（也就是最新的currentIndex）
+    currentIndex = (currentIndex + offset + indexArray.count) % indexArray.count;
+    
+    // cell.headline = self.headlines[index];这段代码的内部是异步执行的(加载网络图片)，所以把下面的代码放在主队列中，等主线程上的代码执行完毕之后再执行.
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // 当滚动结束后，让第一个cell再偷偷的(无动画)滚回界面
+        // 所以还会自动执行返回cell的方法
+        NSIndexPath *idxPath = [NSIndexPath indexPathForItem:1 inSection:0];
+        [logCollectionView scrollToItemAtIndexPath:idxPath atScrollPosition:0 animated:NO];
+    });
+    return;
+    
     NSLog(@"\nsize== %f offset==%f",scrollView.contentSize.height,scrollView.contentOffset.y+HEIGHT);
     if (scrollView.contentOffset.y == 0) {
         NSLog(@"滑到顶部");
         NSInteger index = ((NSNumber *)indexArray[2]).integerValue;
         [indexArray replaceObjectAtIndex:2 withObject:@(index-1)];
-        [logCollectionView reloadData];
+        [itemCountArray replaceObjectAtIndex:2 withObject:@([self itemCountWithIndex:index]-1)];
+//        [logCollectionView reloadData];
+        NSIndexPath *idxPath = [NSIndexPath indexPathForItem:1 inSection:0];
+        [logCollectionView scrollToItemAtIndexPath:idxPath atScrollPosition:0 animated:NO];
 //        [logCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:2] atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
         
         for (int i = 0; i < indexArray.count; i++) {
@@ -156,13 +211,17 @@ NSString * const KReusableFooterView = @"reuseFooter";
             }
             NSInteger index = ((NSNumber *)indexArray[i]).integerValue;
             [indexArray replaceObjectAtIndex:i withObject:@(index-1)];
+            [itemCountArray replaceObjectAtIndex:i withObject:@([self itemCountWithIndex:index])];
         }
-        [logCollectionView reloadData];
+//        [logCollectionView reloadData];
     }else if(scrollView.contentOffset.y + HEIGHT > scrollView.contentSize.height){
         NSLog(@"滑到底部");
         NSInteger index = ((NSNumber *)indexArray[2]).integerValue;
         [indexArray replaceObjectAtIndex:2 withObject:@(index+1)];
-        [logCollectionView reloadData];
+        [itemCountArray replaceObjectAtIndex:2 withObject:@([self itemCountWithIndex:index]-1)];
+//        [logCollectionView reloadData];
+        NSIndexPath *idxPath = [NSIndexPath indexPathForItem:1 inSection:0];
+        [logCollectionView scrollToItemAtIndexPath:idxPath atScrollPosition:0 animated:NO];
         //        [logCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:2] atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
         
         for (int i = 0; i < indexArray.count; i++) {
@@ -171,8 +230,9 @@ NSString * const KReusableFooterView = @"reuseFooter";
             }
             NSInteger index = ((NSNumber *)indexArray[i]).integerValue;
             [indexArray replaceObjectAtIndex:i withObject:@(index+1)];
+            [itemCountArray replaceObjectAtIndex:i withObject:@([self itemCountWithIndex:index])];
         }
-        [logCollectionView reloadData];
+//        [logCollectionView reloadData];
     }
 }
 
